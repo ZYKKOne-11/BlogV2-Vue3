@@ -4,7 +4,9 @@
       <img class="w-14 rounded-full" src="@/assets/avaimg.png" alt="" />
     </div>
     <div class="info">
-      <span>Personal blog by <span style="color: #ff6b81"> ZYKKOne.</span></span>
+      <span class="flex">
+        Personal blog by <AnimationLink href="#" text="KKOne" />
+      </span>
       <span>" a Funny Coder "（ 也许是个艺术家或肥宅,</span>
     </div>
   </aside>
@@ -22,10 +24,10 @@
     font-weight: 400;
     word-wrap: break-word;
     font-kerning: normal;
-    -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-    -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-    -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-    font-feature-settings: "kern", "liga", "clig", "calt";
+    -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   }
 }
 </style>
