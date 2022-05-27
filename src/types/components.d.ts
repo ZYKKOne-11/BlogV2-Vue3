@@ -5,10 +5,8 @@
 declare module 'vue' {
   export interface GlobalComponents {
     DarkToggle: typeof import('./../components/DarkToggle.vue')['default']
-    IconCustomFace: typeof import('~icons/custom/face')['default']
     IconCustomMoon: typeof import('~icons/custom/moon')['default']
     IconCustomSun: typeof import('~icons/custom/sun')['default']
-    IconMdiGoogleDownasaur: typeof import('~icons/mdi/google-downasaur')['default']
     InfoLable: typeof import('./../components/InfoLable.vue')['default']
     PageFooter: typeof import('./../components/PageFooter.vue')['default']
     SearchInput: typeof import('./../components/SearchInput.vue')['default']

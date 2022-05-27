@@ -3,7 +3,7 @@ const props = defineProps({ name: String })
 </script>
 <template>
   <div class="wrap">
-    <TopHeader size="true" />
+    <TopHeader size="small" />
     <div class="my-5">
       <div class="mb-5 font-bold">
         <span class="text-3xl ml-2">{{ props.name }}</span>

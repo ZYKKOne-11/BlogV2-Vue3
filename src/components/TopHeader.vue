@@ -1,13 +1,12 @@
 <script lang="ts" setup>
 defineProps({
-  size: Boolean,
+  size: String,
 })
 </script>
 
 <template>
   <header class="flex justify-between">
-    <a v-if="!size" class="title" href="/">NoPatience</a>
-    <a v-if="size" class="smallTitle" href="/">NoPatience</a>
+    <a :class="size ==='small'? 'smallTitle': 'title'" href="/">NoPatience</a>
     <DarkToggle />
   </header>
 </template>
@@ -20,6 +19,6 @@ defineProps({
 .smallTitle {
   font-size: 1.5rem;
   font-weight: bolder;
-  color: #FFA7C4;
+  color: #ffa7c4;
 }
 </style>
