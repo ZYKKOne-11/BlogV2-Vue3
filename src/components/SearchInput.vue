@@ -8,7 +8,6 @@
       bg="gray-100"
       text="gray-600"
       outline="none"
-      @keydown.enter="go"
     />
     <button
       class="rounded"
@@ -17,7 +16,6 @@
       p="x-2"
       bg="green-500"
       text="white lg"
-      @click="go"
     >
       Go <IconMdiGoogleDownasaur class="animate-bounce align-middle" />
     </button>
