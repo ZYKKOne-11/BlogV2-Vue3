@@ -4,6 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AnimationLink: typeof import('./../components/AnimationLink.vue')['default']
     DarkToggle: typeof import('./../components/DarkToggle.vue')['default']
     IconCustomMoon: typeof import('~icons/custom/moon')['default']
     IconCustomSun: typeof import('~icons/custom/sun')['default']
