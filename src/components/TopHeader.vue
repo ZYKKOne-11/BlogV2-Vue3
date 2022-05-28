@@ -6,7 +6,12 @@ defineProps({
 
 <template>
   <header class="flex justify-between">
-    <a :class="size ==='small'? 'smallTitle': 'title'" href="/">NoPatience</a>
+    <a
+      :class="size === 'small' ? 'smallTitle' : 'title'"
+      href="/"
+    >
+      NoPatience
+    </a>
     <DarkToggle />
   </header>
 </template>
