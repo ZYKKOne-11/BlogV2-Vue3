@@ -1,8 +1,34 @@
 <script lang="ts" setup>
-const router = useRouter()
+type article = {
+  cid: number
+  content: string
+  title: string
+  desciption: string
+  created: string
+}
 
-function go(value: string) {
-  if (value) router.push(`/hello/${encodeURIComponent(value)}`)
+const router = useRouter()
+const articleList = ref<article []>([])
+const getList = async () => {
+  fetch('https://zyeeblog.com:8081/blogs/Testing', {
+    method: 'GET',
+  })
+    .then(res => res.json())
+    .then(data => {
+      articleList.value = data.data
+    })
+}
+
+getList()
+
+function go(value: any) {
+  const data = JSON.stringify(value)
+  if (value) {
+    router.push({
+      path: `/hello/${encodeURIComponent(value.title)}`,
+      query: { article: data },
+    })
+  }
 }
 </script>
 <template>
@@ -11,24 +37,14 @@ function go(value: string) {
     <InfoLable />
     <!-- <div class="my-4">Index View <IconCustomFace /></div> -->
     <main>
-      <article>
+      <article v-for="item in articleList" :key="item.cid">
         <header>
-          <h3 @click="go('测试标题嘎嘎长的标题！！！！！！！')">测试标题嘎嘎长的标题！！！！！！！</h3>
+          <h3 @click="go(item)">{{ item.title }}</h3>
           <small>星期五，21日，7月，2021 · ❤️</small>
         </header>
         <p>
           让我把代码变的整洁吧！～让我把代码变的整洁吧！～让我把代码变的整洁吧！～让我把代码变的整洁吧！～让我把代码变的整洁吧！～
         </p>
-      </article>
-      <article>
-        <header><h3>测试标题嘎嘎长的标题！</h3></header>
-        <small>星期五，21日，7月，2021 · ❤️</small>
-        <p>让我把代码变的整洁吧！～</p>
-      </article>
-      <article>
-        <header><h3>测试标题嘎嘎长的标题！！！</h3></header>
-        <small>星期五，21日，7月，2021 · ❤️</small>
-        <p>让我把代码变的整洁吧！～</p>
       </article>
     </main>
     <BasicHello />
