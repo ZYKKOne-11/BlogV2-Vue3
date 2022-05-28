@@ -10,6 +10,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
+import requireTransform from 'vite-plugin-require-transform'
 
 export default defineConfig({
   base: './',
@@ -38,6 +39,9 @@ export default defineConfig({
       customCollections: {
         custom: FileSystemIconLoader(resolve(__dirname, 'src/assets/icons')),
       },
+    }),
+    requireTransform({
+      fileRegex: /.js$|.vue$/,
     }),
   ],
   resolve: {
