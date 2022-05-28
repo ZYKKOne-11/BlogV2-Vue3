@@ -9,3 +9,5 @@ declare module '*.vue' {
 declare interface ImportMetaEnv {
   VITE_APP_TITLE: string
 }
+
+declare module 'marked'
