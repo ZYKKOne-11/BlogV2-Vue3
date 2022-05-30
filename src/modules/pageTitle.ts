@@ -1,7 +1,7 @@
 import { type UserModule } from '@/types'
 
 export const install: UserModule = ({ router }) => {
-  const appTitle = import.meta.env.VITE_APP_TITLE || ''
+  const appTitle = import.meta.env.VITE_APP_TITLE || 'NoPatience'
   const title = ref('')
   useTitle(
     computed(() => {
