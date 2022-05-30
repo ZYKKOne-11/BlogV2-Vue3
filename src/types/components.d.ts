@@ -7,6 +7,7 @@ declare module 'vue' {
     AnimationLink: typeof import('./../components/AnimationLink.vue')['default']
     DarkToggle: typeof import('./../components/DarkToggle.vue')['default']
     IconCustomMoon: typeof import('~icons/custom/moon')['default']
+    IconCustomPen: typeof import('~icons/custom/pen')['default']
     IconCustomSun: typeof import('~icons/custom/sun')['default']
     InfoLable: typeof import('./../components/InfoLable.vue')['default']
     PageFooter: typeof import('./../components/PageFooter.vue')['default']
