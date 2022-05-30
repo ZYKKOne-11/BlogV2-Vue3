@@ -5,7 +5,7 @@
     </div>
     <div class="info">
       <span class="flex">
-        Personal blog by <AnimationLink href="#" text="KKOne" />
+        Personal blog by <AnimationLink href="#/about/me" text="KKOne" />
       </span>
       <span>" a Funny Coder "（ 也许是个艺术家或肥宅,</span>
     </div>
