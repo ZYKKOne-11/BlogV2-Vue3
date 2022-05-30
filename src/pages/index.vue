@@ -47,7 +47,6 @@ function go(value: any) {
         </p>
       </article>
     </main>
-    <BasicHello />
   </div>
 </template>
 
