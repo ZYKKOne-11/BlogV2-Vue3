@@ -49,4 +49,12 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
+  server: {
+    proxy: {
+      '/core-api': {
+        target: 'http://1.117.86.51',
+        changeOrigin: true,
+      },
+    },
+  },
 })

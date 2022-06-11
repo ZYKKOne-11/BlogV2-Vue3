@@ -3,14 +3,15 @@ type article = {
   cid: number
   content: string
   title: string
-  desciption: string
+  description: string
   created: string
+  date: string
 }
 
 const router = useRouter()
-const articleList = ref<article []>([])
+const articleList = ref<article[]>([])
 const getList = async () => {
-  fetch('https://zyeeblog.com:8081/blogs/Testing', {
+  fetch('/core-api/blog/article', {
     method: 'GET',
   })
     .then(res => res.json())
@@ -22,11 +23,9 @@ const getList = async () => {
 getList()
 
 function go(value: any) {
-  const data = JSON.stringify(value)
   if (value) {
     router.push({
-      path: `/hello/${encodeURIComponent(value.title)}`,
-      query: { article: data },
+      path: `/hello/${encodeURIComponent(value.id)}`,
     })
   }
 }
@@ -40,10 +39,10 @@ function go(value: any) {
       <article v-for="item in articleList" :key="item.cid">
         <header>
           <h3 @click="go(item)">{{ item.title }}</h3>
-          <small>星期五，21日，7月，2021 · ❤️</small>
+          <small>{{ item.date }}</small>
         </header>
         <p>
-          让我把代码变的整洁吧！～让我把代码变的整洁吧！～让我把代码变的整洁吧！～让我把代码变的整洁吧！～让我把代码变的整洁吧！～
+          {{ item.description }}
         </p>
       </article>
     </main>
